@@ -1,0 +1,40 @@
+.myStyle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.table {
+  min-width: 200px;
+}
+.myCol {
+  width: 300px;
+  height: 250px;
+  overflow: auto;
+  margin: 0px 6px 6px;
+}
+.myOptions {
+  width: 150px;
+  height: 150px;
+  
+}
+.box {
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 20px 0px;
+  margin: 0px 6px 6px;
+  max-width: 200px;
+  width: 300px;
+  height: 250px;
+  overflow: scroll;
+}
+.td {
+  font-size: 4px;
+}
+@keyframes bounce {
+  33% { transform: translateY(-20px); }
+  66% { transform: translateY(0px); }
+}
+
+.bounce {
+  animation: bounce 1s infinite ease-in-out;
+}
