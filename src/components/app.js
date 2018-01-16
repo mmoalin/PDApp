@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MainDashboard from './mainDashboard';
 import ContactsDashboard from './contactsDashboard';
+import LoginForm from './loginform';
+import RegisterForm from './registerform';
 
 export default class App extends Component {
   render() {
@@ -20,12 +22,10 @@ export default class App extends Component {
       "Mo Moalin",
       "Mo Moalin",
       "Mo Moalin",
-
     ];
     return (
       <div>
-        <MainDashboard projects={projects} tasks={tasks}/>
-        <ContactsDashboard items={contacts} />
+        <RegisterForm />
       </div>
     );
   }

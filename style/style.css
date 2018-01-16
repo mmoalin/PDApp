@@ -1,7 +1,5 @@
 .myStyle {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 .table {
   min-width: 200px;
@@ -15,7 +13,14 @@
 .myOptions {
   width: 150px;
   height: 150px;
-  
+  justify-content: space-around;
+  text-align: text-center;
+}
+.myContactsMain {
+    width: 220px;
+    height: 250px;
+    overflow: auto;
+    margin: 0px 6px 6px;
 }
 .box {
   border-width: 1px;
