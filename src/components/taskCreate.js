@@ -48,14 +48,14 @@ class TaskCreate extends Component{
         <label>
           Schedule in:
             <input
-              name="ownCalendar"
+              name="Calendar"
               type="radio"
               value="ownCalendar"
               onChange={this.handleInputChange}>
               Own Calendar
             </input>
             <input
-              name="otherCalendar"
+              name="Calendar"
               type="radio"
               value="otherCalendar"
               onChange={this.handleInputChange}>

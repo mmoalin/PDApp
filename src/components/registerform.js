@@ -52,28 +52,30 @@ class RegisterForm extends Component{
         {this.renderInput("Usual wake up time", "uwut", "text", this.state.uwut, this.handleInputChange)}
         <br/>
         <label>
-          Most productive in the:
+          Most productive in the:  <span> </span>
             <input
-              name="morning"
+              name="productive"
               type="radio"
               value="morning"
               onChange={this.handleInputChange}>
-              Morning
+               <span> </span> Morning
             </input>
+            <span> </span>
             <input
-              name="evening"
+              name="productive"
               type="radio"
               value="evening"
               onChange={this.handleInputChange}>
-              Evening
+              <span> </span> Evening
             </input>
-              <input
-                name="notsure"
-                type="radio"
-                value="notsure"
-                onChange={this.handleInputChange}>
-                NotSure
-              </input>
+          <span> </span>
+            <input
+              name="productive"
+              type="radio"
+              value="notsure"
+              onChange={this.handleInputChange}>
+              <span> </span> NotSure
+            </input>
         </label>
         <br/>
         <input type="submit" onClick={this.handleSubmit}> </input>
