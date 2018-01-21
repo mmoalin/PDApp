@@ -45,7 +45,11 @@ export default class Contactsboard extends Component {
   );
   }
   render() {
-    const { items } = this.props;
+    const items = [
+      "Mo Moalin",
+      "Mo Moalin",
+      "Mo Moalin",
+    ];
     return (
       <div className="container myStyle">
         <div className="row">

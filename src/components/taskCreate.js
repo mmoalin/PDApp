@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-class RegisterForm extends Component{
+class TaskCreate extends Component{
   constructor(props) {
     super(props);
     this.state = {
-      userName: "",
-      password: "",
+      taskName: "",
+      ownCalendar: "",
       selectedOption: "",
       email: "",
       uwut: "",
@@ -43,42 +43,32 @@ class RegisterForm extends Component{
   render(){
     return (
       <form>
-        {this.renderInput("Username", "userName", "text", this.state.userName, this.handleInputChange)}
-        <br/>
-        {this.renderInput("Password", "password", "password", this.state.password, this.handleInputChange)}
-        <br/>
-        {this.renderInput("Email", "email", "text", this.state.Email, this.handleInputChange)}
-        <br/>
-        {this.renderInput("Usual wake up time", "uwut", "text", this.state.uwut, this.handleInputChange)}
+        {this.renderInput("Title", "taskName", "text", this.state.taskName, this.handleInputChange)}
         <br/>
         <label>
-          Most productive in the:
+          Schedule in:
             <input
-              name="morning"
+              name="ownCalendar"
               type="radio"
-              value="morning"
+              value="ownCalendar"
               onChange={this.handleInputChange}>
-              Morning
+              Own Calendar
             </input>
             <input
-              name="evening"
+              name="otherCalendar"
               type="radio"
-              value="evening"
+              value="otherCalendar"
               onChange={this.handleInputChange}>
-              Evening
-            </input>
-              <input
-                name="notsure"
-                type="radio"
-                value="notsure"
-                onChange={this.handleInputChange}>
-                NotSure
+               Someone else's Calendar
               </input>
         </label>
         <br/>
-        <input type="submit" onClick={this.handleSubmit}> </input>
+        <button type="submit" onClick={this.handleSubmit}> Automated Schedule  </button>
+        <br/>
+        <button type="submit" onClick={this.handleSubmit}> Schedule manually  </button>
+
       </form>
     );
   }
 }
-export default RegisterForm;
+export default TaskCreate;

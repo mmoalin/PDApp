@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-export default class MainDashboard extends Component {
+import Contactsboard from './contactsDashboard';
 
+export default class MainDashboard extends Component {
   renderItems(items){
     return items.map(item =>
       <tr>
@@ -25,11 +26,25 @@ export default class MainDashboard extends Component {
   );
   }
   render() {
-    const { projects, tasks } = this.props;
+    const projects = [
+      "Taking over the world",
+      "Taking over the world",
+      "Taking over the world",
+      "Taking over the world"
+    ];
+    const tasks = [
+      "Dummy text for task",
+      "Dummy text for task",
+      "Dummy text for task",
+      "Dummy text for task"
+    ];
     return (
-      <div  style={ {float: "left"}}>
-      {this.renderSection("Tasks", tasks)}
-      {this.renderSection("Projects", projects)}
+      <div>
+        <div  style={ {float: "left"}}>
+        {this.renderSection("Tasks", tasks)}
+        {this.renderSection("Projects", projects)}
+        </div>
+        <Contactsboard />
       </div>
     );
   }

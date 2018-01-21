@@ -1,31 +1,44 @@
 import React, { Component } from 'react';
 import MainDashboard from './mainDashboard';
 import ContactsDashboard from './contactsDashboard';
-import LoginForm from './loginform';
-import RegisterForm from './registerform';
+import Login from './loginform';
+import TaskCreate from './taskCreate';
+import TaskInProgress from './taskInProgress';
+import Register from './registerform';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link
+} from 'react-router-dom';
 
 export default class App extends Component {
   render() {
-    const projects = [
-      "Taking over the world",
-      "Taking over the world",
-      "Taking over the world",
-      "Taking over the world"
-    ];
-    const tasks = [
-      "Dummy text for task",
-      "Dummy text for task",
-      "Dummy text for task",
-      "Dummy text for task"
-    ];
-    const contacts = [
-      "Mo Moalin",
-      "Mo Moalin",
-      "Mo Moalin",
-    ];
     return (
       <div>
-        <RegisterForm />
+      <Router>
+         <div>
+           <ul>
+             <li><Link to="/">MainDashboard</Link></li>
+             <li><Link to="/login">Login</Link></li>
+             <li><Link to="/register">Register</Link></li>
+             <li><Link to="/taskcreate">Create a task</Link></li>
+             <li><Link to="/taskinprogress">Task in Progress</Link></li>
+           </ul>
+
+           <hr/>
+           <Switch>
+
+           <Route exact path="/" component={MainDashboard}/>
+           <Route path="/login" component={Login}/>
+           <Route path="/register" component={Register}/>
+           <Route path="/taskcreate" component={TaskCreate}/>
+           <Route path="/taskinprogress" component={TaskInProgress}/>
+           {this.props.children}
+           </Switch>
+
+         </div>
+       </Router>
       </div>
     );
   }
