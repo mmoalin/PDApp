@@ -16,6 +16,9 @@
   justify-content: space-around;
   text-align: text-center;
 }
+.label {
+    padding-right:10px;
+}
 .myContactsMain {
     width: 220px;
     height: 250px;

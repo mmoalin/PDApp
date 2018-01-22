@@ -31,7 +31,8 @@ class TaskCreate extends Component{
   renderInput(label, inputName, type, val, onChange){
     return(
         <label>
-          {label}:
+          <b>{label}:</b>
+          <span />
             <input
               name={inputName}
               type={type}
@@ -46,7 +47,8 @@ class TaskCreate extends Component{
         {this.renderInput("Title", "taskName", "text", this.state.taskName, this.handleInputChange)}
         <br/>
         <label>
-          Schedule in:
+          <b>Schedule in :</b>
+          <div />
             <input
               name="Calendar"
               type="radio"

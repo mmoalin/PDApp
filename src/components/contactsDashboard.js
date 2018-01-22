@@ -12,10 +12,10 @@ export default class Contactsboard extends Component {
   }
   renderOptions(){
     return(
-      <div className="container col-xs-4" style={{float:"left"}}>
-        <div style={{margin:"45% 0 0 0 "}}>
-          <button onClick={this.onSendTask}>Send Task</button>
-          <button onClick={this.onAddToGroup}>Add to group</button>
+      <div className="container col-xs-4 " style={{float:"left"}}>
+        <div style={{margin:"15% 0 0 0 " }} >
+          <button onClick={this.onSendTask}>Send Task</button><br />
+          <button onClick={this.onAddToGroup}>Add to group</button><br />
           <button onClick={this.onDeleteTask}>Delete</button>
         </div>
       </div>

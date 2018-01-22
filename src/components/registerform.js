@@ -31,7 +31,8 @@ class RegisterForm extends Component{
   renderInput(label, inputName, type, val, onChange){
     return(
         <label>
-          {label}:
+          <b>{label}:</b>
+          <div />
             <input
               name={inputName}
               type={type}
@@ -52,7 +53,8 @@ class RegisterForm extends Component{
         {this.renderInput("Usual wake up time", "uwut", "text", this.state.uwut, this.handleInputChange)}
         <br/>
         <label>
-          Most productive in the:  <span> </span>
+          <b>Most productive in the:
+          </b> <div />
             <input
               name="productive"
               type="radio"

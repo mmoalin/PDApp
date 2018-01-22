@@ -40,6 +40,7 @@ export default class TaskInProgress extends Component {
         value= { this.state.userInput }
         onChange= { this.handleChange } >
         </textarea>
+        <div />
         <button value="Send" onClick={this.publish}>Save</button>
       </div>
     );

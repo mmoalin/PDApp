@@ -18,13 +18,15 @@ export default class App extends Component {
       <div>
       <Router>
          <div>
-           <ul>
-             <li><Link to="/">MainDashboard</Link></li>
-             <li><Link to="/login">Login</Link></li>
-             <li><Link to="/register">Register</Link></li>
-             <li><Link to="/taskcreate">Create a task</Link></li>
-             <li><Link to="/taskinprogress">Task in Progress</Link></li>
-           </ul>
+           <nav className="nav navbar-light">
+             <ul>
+               <li><Link to="/">MainDashboard</Link></li>
+               <li><Link to="/login">Login</Link></li>
+               <li><Link to="/register">Register</Link></li>
+               <li><Link to="/taskcreate">Create a task</Link></li>
+               <li><Link to="/taskinprogress">Task in Progress</Link></li>
+             </ul>
+           </nav>
 
            <hr/>
            <Switch>

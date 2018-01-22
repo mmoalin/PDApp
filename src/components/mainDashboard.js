@@ -40,7 +40,7 @@ export default class MainDashboard extends Component {
     ];
     return (
       <div>
-        <div  style={ {float: "left"}}>
+        <div style={ {float: "left"}}>
         {this.renderSection("Tasks", tasks)}
         {this.renderSection("Projects", projects)}
         </div>

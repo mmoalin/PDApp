@@ -26,7 +26,8 @@ class LoginForm extends Component{
   renderInput(label, inputName, type, val, onChange){
     return(
         <label>
-          {label}:
+          <b>{label}:</b>
+          <div />
             <input
               name={inputName}
               type={type}
