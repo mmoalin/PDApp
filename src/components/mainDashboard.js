@@ -11,7 +11,7 @@ export default class MainDashboard extends Component {
   }
   renderSection(title, items) {
     return (
-      <div className="container myCol">
+      <div className="container ">
       <table className="table table-dark">
       <thead>
         <tr>
@@ -40,12 +40,19 @@ export default class MainDashboard extends Component {
     ];
     return (
       <div>
-        <div style={ {float: "left"}}>
-        {this.renderSection("Tasks", tasks)}
-        {this.renderSection("Projects", projects)}
+        <div className= "container" style={ {float: "left"}}>
+        <div className = "row">
+         <div className = "col-sm-6">
+           {this.renderSection("Tasks", tasks)}
+           {this.renderSection("Projects", projects)}
+         </div>
+         <div className = "col-sm-6">
+            <Contactsboard />
+         </div>
         </div>
-        <Contactsboard />
       </div>
+
+    </div>
     );
   }
 }

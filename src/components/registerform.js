@@ -60,23 +60,24 @@ class RegisterForm extends Component{
               type="radio"
               value="morning"
               onChange={this.handleInputChange}>
-               <span> </span> Morning
+               <span style={{padding:"0 6px 0 0"}} /> Morning
             </input>
-            <span> </span>
+            <span style={{padding:"0 6px 0 0"}} />
             <input
               name="productive"
               type="radio"
               value="evening"
               onChange={this.handleInputChange}>
-              <span> </span> Evening
+              <span style={{padding:"0 6px 0 0"}} />
+              Evening
             </input>
-          <span> </span>
+          <span style={{padding:"0 6px 0 0"}} />
             <input
               name="productive"
               type="radio"
               value="notsure"
               onChange={this.handleInputChange}>
-              <span> </span> NotSure
+              <span style={{padding:"0 6px 0 0"}} />Not Sure
             </input>
         </label>
         <br/>

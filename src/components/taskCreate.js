@@ -32,12 +32,12 @@ class TaskCreate extends Component{
     return(
         <label>
           <b>{label}:</b>
-          <span />
-            <input
-              name={inputName}
-              type={type}
-              value={val}
-              onChange={onChange} />
+          <span style={{padding:"0 5px 0 0"}} />
+          <input
+            name={inputName}
+            type={type}
+            value={val}
+            onChange={onChange} />
         </label>
     )
   }
@@ -54,20 +54,25 @@ class TaskCreate extends Component{
               type="radio"
               value="ownCalendar"
               onChange={this.handleInputChange}>
+              <span style={{padding:"0 3% 0 0"}} />
               Own Calendar
             </input>
+            <span style={{padding:"0 3% 0 0"}} />
             <input
               name="Calendar"
               type="radio"
               value="otherCalendar"
               onChange={this.handleInputChange}>
+              <span style={{padding:"0 3% 0 0"}} />
                Someone else's Calendar
               </input>
         </label>
         <br/>
+        <div />
         <button type="submit" onClick={this.handleSubmit}> Automated Schedule  </button>
         <br/>
-        <button type="submit" onClick={this.handleSubmit}> Schedule manually  </button>
+        <div />
+        <button type="submit"  style={{margin:"15px 0 0 0"}} onClick={this.handleSubmit}> Schedule manually  </button>
 
       </form>
     );
