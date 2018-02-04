@@ -12,8 +12,8 @@ export default class Contactsboard extends Component {
   }
   renderOptions(){
     return(
-      <div className="container col-sm-6 " style={{float:"left"}}>
-        <div style={{margin:"15% 0 0 0 " }} >
+      <div className="container col-sm-6 ">
+        <div style={{margin:"10% 0 0 0 " }} >
           <button onClick={this.onSendTask}>Send Task</button><br />
           <button onClick={this.onAddToGroup}>Add to group</button><br />
           <button onClick={this.onDeleteTask}>Delete</button>
@@ -30,7 +30,7 @@ export default class Contactsboard extends Component {
   }
   renderMain(items) {
     return (
-      <div className="container myContactsMain col-sm-6" style={{float:"left"}}>
+      <div className="container myContactsMain col-sm-6">
       <table className="table table-dark">
       <thead>
         <tr>
@@ -51,7 +51,7 @@ export default class Contactsboard extends Component {
       "Mo Moalin",
     ];
     return (
-      <div className="container myStyle">
+      <div className="container">
         <div className="row">
           {this.renderMain(items)}
           {this.renderOptions()}

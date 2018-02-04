@@ -16,7 +16,7 @@ import {
 export default class App extends Component {
   render() {
     return (
-     <div>
+     <div   >
       <Router>
          <div>
          <Navbar>

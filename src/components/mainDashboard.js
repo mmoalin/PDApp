@@ -11,8 +11,8 @@ export default class MainDashboard extends Component {
   }
   renderSection(title, items) {
     return (
-      <div className="container ">
-      <table className="table table-dark">
+      <div className="container " style={{float:"left", width: "80%"}}>
+      <table className="table">
       <thead>
         <tr>
           <th scope="col">{title}</th>
