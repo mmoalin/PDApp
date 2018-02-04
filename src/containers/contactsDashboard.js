@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Contactsboard extends Component {
+class Contactsboard extends Component {
   onSendTask(){
 
   }
@@ -24,7 +25,7 @@ export default class Contactsboard extends Component {
   renderItems(items){
     return items.map(item =>
       <tr>
-        <td>{item}</td>
+        <td>{item.content}</td>
       </tr>
       );
   }
@@ -34,7 +35,7 @@ export default class Contactsboard extends Component {
       <table className="table table-dark">
       <thead>
         <tr>
-          <th scope="col">Contacts</th>
+          <th scope="col" >Contacts</th>
         </tr>
         </thead>
           <tbody>
@@ -45,18 +46,19 @@ export default class Contactsboard extends Component {
   );
   }
   render() {
-    const items = [
-      "Mo Moalin",
-      "Mo Moalin",
-      "Mo Moalin",
-    ];
     return (
       <div className="container">
         <div className="row">
-          {this.renderMain(items)}
+          {this.renderMain(this.props.contacts)}
           {this.renderOptions()}
         </div>
       </div>
     );
   }
 }
+function mapStateToProps(state){
+  return{
+    contacts: state.contacts,
+  }
+}
+export default connect(mapStateToProps)(Contactsboard);

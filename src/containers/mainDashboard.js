@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import selectTask from '../actions/index';
 import Contactsboard from './contactsDashboard';
 
-export default class MainDashboard extends Component {
+class MainDashboard extends Component {
+  constructor(props) {
+    super(props);
+    this.renderItems = this.renderItems.bind(this);
+  }
   renderItems(items){
+      console.log(items);
     return items.map(item =>
       <tr>
-        <td>{item}</td>
+        <td onClick={() => this.props.selectTask(item)}>{item.content}</td>
       </tr>
       );
   }
@@ -26,25 +34,15 @@ export default class MainDashboard extends Component {
   );
   }
   render() {
-    const projects = [
-      "Taking over the world",
-      "Taking over the world",
-      "Taking over the world",
-      "Taking over the world"
-    ];
-    const tasks = [
-      "Dummy text for task",
-      "Dummy text for task",
-      "Dummy text for task",
-      "Dummy text for task"
-    ];
+    console.log(this.props);
+    console.log(this.props.projects);
     return (
       <div>
         <div className= "container" style={ {float: "left"}}>
         <div className = "row">
          <div className = "col-sm-6">
-           {this.renderSection("Tasks", tasks)}
-           {this.renderSection("Projects", projects)}
+           {this.renderSection("Tasks", this.props.tasks)}
+           {this.renderSection("Projects", this.props.projects)}
          </div>
          <div className = "col-sm-6">
             <Contactsboard />
@@ -56,3 +54,13 @@ export default class MainDashboard extends Component {
     );
   }
 }
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({selectTask: selectTask }, dispatch);
+}
+function mapStateToProps(state){
+  return{
+    tasks: state.tasks,
+    projects: state.projects
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(MainDashboard);

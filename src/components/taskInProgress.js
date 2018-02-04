@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contactsboard from './contactsDashboard';
+import Contactsboard from '../containers/contactsDashboard';
 
 export default class TaskInProgress extends Component {
     constructor() {

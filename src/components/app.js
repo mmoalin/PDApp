@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem  } from 'react-bootstrap';
-import MainDashboard from './mainDashboard';
-import ContactsDashboard from './contactsDashboard';
+import MainDashboard from '../containers/mainDashboard';
+import ContactsDashboard from '../containers/contactsDashboard';
 import Login from './loginform';
 import TaskCreate from './taskCreate';
 import TaskInProgress from './taskInProgress';
